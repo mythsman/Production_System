@@ -5,23 +5,19 @@
   <property name="enabled">
    <bool>true</bool>
   </property>
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>960</width>
+    <height>658</height>
+   </rect>
+  </property>
   <property name="sizePolicy">
    <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
     <horstretch>0</horstretch>
     <verstretch>0</verstretch>
    </sizepolicy>
-  </property>
-  <property name="minimumSize">
-   <size>
-    <width>635</width>
-    <height>658</height>
-   </size>
-  </property>
-  <property name="maximumSize">
-   <size>
-    <width>635</width>
-    <height>658</height>
-   </size>
   </property>
   <property name="mouseTracking">
    <bool>false</bool>
@@ -35,47 +31,11 @@
   <property name="locale">
    <locale language="Chinese" country="China"/>
   </property>
-  <widget class="QListView" name="listView">
-   <property name="geometry">
-    <rect>
-     <x>30</x>
-     <y>140</y>
-     <width>181</width>
-     <height>461</height>
-    </rect>
-   </property>
-   <property name="sizePolicy">
-    <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-     <horstretch>0</horstretch>
-     <verstretch>0</verstretch>
-    </sizepolicy>
-   </property>
-  </widget>
-  <widget class="QListView" name="listView_2">
-   <property name="geometry">
-    <rect>
-     <x>370</x>
-     <y>140</y>
-     <width>221</width>
-     <height>151</height>
-    </rect>
-   </property>
-  </widget>
-  <widget class="QListView" name="listView_3">
-   <property name="geometry">
-    <rect>
-     <x>370</x>
-     <y>320</y>
-     <width>221</width>
-     <height>81</height>
-    </rect>
-   </property>
-  </widget>
   <widget class="QPushButton" name="btnCalc">
    <property name="geometry">
     <rect>
-     <x>440</x>
-     <y>430</y>
+     <x>610</x>
+     <y>250</y>
      <width>80</width>
      <height>22</height>
     </rect>
@@ -84,30 +44,10 @@
     <string>Calculate</string>
    </property>
   </widget>
-  <widget class="QTextBrowser" name="textBrowser">
-   <property name="geometry">
-    <rect>
-     <x>370</x>
-     <y>480</y>
-     <width>221</width>
-     <height>41</height>
-    </rect>
-   </property>
-  </widget>
-  <widget class="QTextBrowser" name="textBrowser_2">
-   <property name="geometry">
-    <rect>
-     <x>110</x>
-     <y>40</y>
-     <width>256</width>
-     <height>31</height>
-    </rect>
-   </property>
-  </widget>
   <widget class="QPushButton" name="btnChooseFile">
    <property name="geometry">
     <rect>
-     <x>370</x>
+     <x>520</x>
      <y>40</y>
      <width>141</width>
      <height>31</height>
@@ -122,8 +62,8 @@
     <rect>
      <x>40</x>
      <y>110</y>
-     <width>161</width>
-     <height>21</height>
+     <width>211</width>
+     <height>41</height>
     </rect>
    </property>
    <property name="text">
@@ -139,14 +79,14 @@
   <widget class="QLabel" name="label_2">
    <property name="geometry">
     <rect>
-     <x>278</x>
-     <y>140</y>
-     <width>81</width>
-     <height>151</height>
+     <x>370</x>
+     <y>110</y>
+     <width>221</width>
+     <height>41</height>
     </rect>
    </property>
    <property name="text">
-    <string>Database</string>
+    <string>Input Database</string>
    </property>
    <property name="alignment">
     <set>Qt::AlignCenter</set>
@@ -155,14 +95,14 @@
   <widget class="QLabel" name="label_3">
    <property name="geometry">
     <rect>
-     <x>278</x>
-     <y>320</y>
-     <width>81</width>
-     <height>71</height>
+     <x>40</x>
+     <y>400</y>
+     <width>211</width>
+     <height>41</height>
     </rect>
    </property>
    <property name="text">
-    <string>Accepted Result</string>
+    <string>Expected Result</string>
    </property>
    <property name="alignment">
     <set>Qt::AlignCenter</set>
@@ -171,25 +111,126 @@
     <bool>true</bool>
    </property>
   </widget>
-  <widget class="QPushButton" name="btnExit">
+  <widget class="QLineEdit" name="lineEdit">
    <property name="geometry">
     <rect>
-     <x>440</x>
-     <y>560</y>
+     <x>300</x>
+     <y>40</y>
+     <width>221</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="dragEnabled">
+    <bool>true</bool>
+   </property>
+   <property name="readOnly">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QListWidget" name="listWidget">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>150</y>
+     <width>221</width>
+     <height>241</height>
+    </rect>
+   </property>
+   <property name="sortingEnabled">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QListWidget" name="listWidget_2">
+   <property name="geometry">
+    <rect>
+     <x>370</x>
+     <y>150</y>
+     <width>221</width>
+     <height>241</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QListWidget" name="listWidget_3">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>440</y>
+     <width>221</width>
+     <height>141</height>
+    </rect>
+   </property>
+   <property name="sortingEnabled">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btnAdd">
+   <property name="geometry">
+    <rect>
+     <x>270</x>
+     <y>200</y>
      <width>80</width>
      <height>22</height>
     </rect>
    </property>
    <property name="text">
-    <string>Exit</string>
+    <string>Add--&gt;</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btnRm">
+   <property name="geometry">
+    <rect>
+     <x>270</x>
+     <y>330</y>
+     <width>80</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>&lt;--Remove</string>
+   </property>
+  </widget>
+  <widget class="QListWidget" name="listWidget_4">
+   <property name="geometry">
+    <rect>
+     <x>710</x>
+     <y>440</y>
+     <width>221</width>
+     <height>141</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QListWidget" name="listWidget_5">
+   <property name="geometry">
+    <rect>
+     <x>710</x>
+     <y>150</y>
+     <width>221</width>
+     <height>241</height>
+    </rect>
    </property>
   </widget>
   <widget class="QLabel" name="label_4">
    <property name="geometry">
     <rect>
-     <x>280</x>
-     <y>480</y>
-     <width>81</width>
+     <x>710</x>
+     <y>110</y>
+     <width>221</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Output Database</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_5">
+   <property name="geometry">
+    <rect>
+     <x>710</x>
+     <y>400</y>
+     <width>221</width>
      <height>41</height>
     </rect>
    </property>
@@ -199,26 +240,13 @@
    <property name="alignment">
     <set>Qt::AlignCenter</set>
    </property>
+   <property name="wordWrap">
+    <bool>true</bool>
+   </property>
   </widget>
  </widget>
  <resources/>
  <connections>
-  <connection>
-   <sender>btnExit</sender>
-   <signal>clicked()</signal>
-   <receiver>MainWidget</receiver>
-   <slot>close()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>481</x>
-     <y>575</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>497</x>
-     <y>619</y>
-    </hint>
-   </hints>
-  </connection>
   <connection>
    <sender>btnChooseFile</sender>
    <signal>clicked()</signal>
@@ -251,9 +279,43 @@
     </hint>
    </hints>
   </connection>
+  <connection>
+   <sender>btnAdd</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWidget</receiver>
+   <slot>slotAdd()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>303</x>
+     <y>187</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>617</x>
+     <y>112</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btnRm</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWidget</receiver>
+   <slot>slotRm()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>319</x>
+     <y>298</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>614</x>
+     <y>397</y>
+    </hint>
+   </hints>
+  </connection>
  </connections>
  <slots>
   <slot>slotChooseFile()</slot>
   <slot>slotCalc()</slot>
+  <slot>slotAdd()</slot>
+  <slot>slotRm()</slot>
  </slots>
 </ui>
